@@ -9,7 +9,7 @@ from .. import db
 @auth.route('templates/auth/reqister',methods=['GET','POST'])
 def register():
     '''
-    function that registaers the users
+    function that register the users
     '''
     form =RegistrationForm()
     if form.validate_on_submit():
