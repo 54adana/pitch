@@ -1,36 +1,24 @@
- 
 {% extends 'base.html'%}
 {% import 'macros.html' as macro %}
 
 {% block styles%}
-    {{ super() }}
+{{ super() }}
+
+<link rel="stylesheet" href="../static/css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
 {% endblock %}
 {% block content %}
+<body>
+  
+    <h1>WELCOME TO QUICK PITCH BEST SITE WEBPAGE </h1>
 
+<br>
+<br>
+<br>
+  <div class="para">
+  <a href="{{url_for('main.new_pitch')}}"><div class="btn btn-primary">New Pitch</div></a>
 
-    <div class="container">
-      <div class="row">
-        <h4 class="text-left"><a class="btn btn-primary" href="/add/category"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>   Add Category </a></h4>
-
-          {{ macro.displayCategoryList(categories) }}
-        </div>
-    </div>
-
+  <a href="{{url_for('main.view')}}"> <div class="btn btn-success">View Pitch</div></a>
+</div>
+</body>
 {% endblock %}
-{% macro displayPitches(pitch_list) %}
-  {% for pitches in pitch_list %}
-    <div class="col-md-6">
-      <div class="well">
-        <div class="row">
-          <div class="col-md-6">
-              <h3>{{pitches.content}}</h3>
-          </div>
-          <div class="col-md-6">
-            <p>POSTED: {{pitches.date_posted.strftime('%Y/%m/%d || %r')}}</p>
-            <a href="/pitch/{{pitches.id}}"><h4>COMMENT</h4></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  {% endfor %}
-{% endmacro %}
