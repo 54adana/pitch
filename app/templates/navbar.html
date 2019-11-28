@@ -1,5 +1,6 @@
+<link rel="stylesheet" href="../static/css/styles.css">
 <div class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
+    <div class="container-fluid bg-success">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle = "collapse" data-target = ".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -7,18 +8,22 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-              <a class="navbar-brand" href="/" style=" font-size:25px"> QUICK PITCH</a>
+              <a class="navbar-brand" href="/" style=" font-size:25px"><div class="btn btn-primary">QUICK PITCH</div> </a>
   
       </div>
         <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="{{url_for('main.view')}}"><div class="btn btn-primary">Views</div></a></li>
+                  <li><a href="{{url_for('main.new_pitch')}}"><div class="btn btn-primary">New pitch</div></a></li>
+      
+
                  {% if current_user.is_authenticated %}
   
                      <li><a href="/">{{current_user.username.capitalize()}}</a></li>
-                     <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                     <li><a href="{{url_for('auth.logout')}}"><div class="btn btn-primary">Sign out</div></a></li>
   
                  {%else%}
-                     <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                     <li><a href="{{url_for('auth.login')}}"><div class="btn btn-primary">Sign in</div></a></li>
   
                  {%endif%}
               </ul>
