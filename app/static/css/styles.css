@@ -1,0 +1,31 @@
+h1{
+    color:blue;
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+    font-family: 'Notable', sans-serif;
+    
+
+}
+body{
+background-image: url('https://cdn.pixabay.com/photo/2015/05/15/14/47/computer-768696__340.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+p{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Notable', sans-serif;
+    color: white;
+    
+}
+
+.para{
+    text-align: center;
+}
+/* .container-fluid{
+    background-image: url('https://cdn.pixabay.com/photo/2015/05/15/14/47/computer-768696__340.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
